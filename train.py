@@ -75,10 +75,9 @@ if __name__ == "__main__":
     model_prefix = "/models"
     data_file = args.datafile
 
-    exp_id = mlflow.create_experiment("course_classifier")
+    mlflow.set_experiment("ntnu_course_classifier")
 
-
-    with mlflow.start_run(experiment_id=exp_id) as run:
+    with mlflow.start_run() as run:
         # Get path to save model
         tracking_uri = mlflow.tracking.get_tracking_uri() 
         print("Logging to "+tracking_uri)
