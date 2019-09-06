@@ -12,7 +12,6 @@ from sklearn.naive_bayes import MultinomialNB
 import pickle
 import random
 import re
-#import keras
 import os
 import argparse
 import mlflow
@@ -76,9 +75,10 @@ if __name__ == "__main__":
     model_prefix = "/models"
     data_file = args.datafile
 
-    #mlflow.set_experiment("ntnu_course_classifier")
+    exp_id = mlflow.create_experiment("course_classifier")
 
-    with mlflow.start_run() as run:
+
+    with mlflow.start_run(experiment_id=exp_id) as run:
         # Get path to save model
         tracking_uri = mlflow.tracking.get_tracking_uri() 
         print("Logging to "+tracking_uri)

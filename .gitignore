@@ -1,4 +1,5 @@
 .ipynb_checkpoints/
 mlruns/
 __pycache__/
-cheatsheet.txt
+cheatsheet.md
+.netrc
