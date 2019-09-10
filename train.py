@@ -52,7 +52,7 @@ parser.add_argument("-a", "--alpha", help="Naive bayes smoothing parameter (0=no
 parser.add_argument("-f", "--fit_prior", help="Whether to fit priors", type=bool, default=True)
 # Logreg args 
 parser.add_argument("-C", "--C", help="Logistic regression regularization parameter", type=float, default=1.)
-parser.add_argument("-b", "--backend", help="Logistic regression regularization parameter", type=str, choices=["databricks", "local"], default="local")
+parser.add_argument("-b", "--backend", help="Whether training is running local or on databricks", type=str, choices=["databricks", "local"], default="databricks")
 
 
 if __name__ == "__main__":
