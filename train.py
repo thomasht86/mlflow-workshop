@@ -52,6 +52,7 @@ parser.add_argument("-a", "--alpha", help="Naive bayes smoothing parameter (0=no
 parser.add_argument("-f", "--fit_prior", help="Whether to fit priors", type=bool, default=True)
 # Logreg args 
 parser.add_argument("-C", "--C", help="Logistic regression regularization parameter", type=float, default=1.)
+parser.add_argument("-b", "--backend", help="Logistic regression regularization parameter", type=str, choices=["databricks", "local"], default="local")
 
 
 if __name__ == "__main__":
@@ -70,12 +71,17 @@ if __name__ == "__main__":
     model_dict = {"nb":MultinomialNB(alpha=alpha, fit_prior=fit_prior),
                   "log_reg": LogisticRegression(C=C, multi_class="ovr", solver="saga", max_iter=1000)}
     clf = model_dict[args.model]
+    backend = args.backend
 
     conda_env_path = "condaenv.yml"
     model_prefix = "/models"
     data_file = args.datafile
+    if backend=="databricks":
+        exp_name = "/Users/thomas.thoresen@fundatorno.onmicrosoft.com/ntnu_course_classifier"
+    elif backend=="local":
+        exp_name = "ntnu_course_classifier"
 
-    mlflow.set_experiment("ntnu_course_classifier")
+    mlflow.set_experiment(exp_name)
 
     with mlflow.start_run() as run:
         # Get path to save model
