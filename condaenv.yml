@@ -1,4 +1,4 @@
-name: demo2
+name: mlflowenv
 
 channels:
   - defaults
@@ -10,7 +10,7 @@ dependencies:
   - scikit-learn==0.20.3
   - jupyter=1.0.0=py37_7
   - pip:
-    - mlflow==0.9.1 #https://mlflow-snapshots.s3-us-west-2.amazonaws.com/mlflow-1.0.0.rc0-1173.fb8a711-py2.py3-none-any.whl
+    - mlflow
     - seaborn
     - jupyter
     - azureml-sdk
