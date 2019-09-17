@@ -87,7 +87,9 @@ if __name__ == "__main__":
         # Get path to save model
         tracking_uri = mlflow.tracking.get_tracking_uri() 
         print("Logging to "+tracking_uri)
-        artifact_uri = mlflow.get_artifact_uri().split("file://")[1]
+        artifact_uri = mlflow.get_artifact_uri()
+        if artifact_uri.startswith("file://"):
+            artifact_uri = artifact_uri.split("file://")[1]
         print("Saving artifacts to "+artifact_uri)
         model_path = artifact_uri+model_prefix
 
