@@ -1,18 +1,20 @@
 # Workshop EDC2019 - Machine learning - from experiments to production with MLFlow
-This repo contains instructions and code to follow the workshop presented 17-09-2019.
+This repo contains instructions and code to follow the workshop presented 19-09-2019.
 
 The tutorial will demonstrate the lifecycle of a text classifier through the following phases:
 1. Experimenting and EDA in jupyter notebook.
 2. Running structured experiments locally.
 3. Running experiments remotely on a Databricks-cluster in Azure.
-3. Evaluating results of experiments and choosing a model to deploy.
-4. Deploy the selected model to production in Azure. 
-5. Making requests to the model.
+4. Evaluating results of experiments and choosing a model to deploy.
+5. Deploy the selected model to production in Azure. 
+6. Making requests to the model.
 
 The goal of the workshop is to expose participants to the capabilities of MLFlow, and provide a kickstart for those considering to use the platform for their own projects. 
 
 ## Set up environment
 This is a guide to help you set up your development environment if you want follow the demo on your own computer. (And use MLFlow for your own projects afterwards). 
+
+If you don't have Anaconda installed, you should do that prior to the workshop. [Here](https://www.anaconda.com/distribution/) is the link to download Anaconda.
 
 1. Clone the workshop repository.
     
