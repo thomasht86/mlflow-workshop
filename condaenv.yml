@@ -5,13 +5,12 @@ channels:
 dependencies:
   - pip
   - numpy
-  - pandas=0.24.2
-  - python==3.7
-  - scikit-learn==0.20.3
-  - jupyter=1.0.0=py37_7
+  - pandas
+  - python==3.6.8
+  - scikit-learn
+  - jupyter=1.0.0
   - pip:
     - mlflow
     - seaborn
-    - jupyter
     - azureml-sdk
     - pylint

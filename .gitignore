@@ -3,3 +3,4 @@ mlruns/
 __pycache__/
 cheatsheet.md
 .netrc
+.vscode/

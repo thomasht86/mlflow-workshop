@@ -14,24 +14,23 @@ The goal of the workshop is to expose participants to the capabilities of MLFlow
 ## Set up environment
 This is a guide to help you set up your development environment if you want follow the demo on your own computer. (And use MLFlow for your own projects afterwards). 
 
-1. Install Windows Subsystem for Linux (WSL).
-
-    Follow [this](https://docs.microsoft.com/en-us/windows/wsl/install-win10) tutorial to install WSL on Windows 10.
-
-2. Clone the workshop repository.
+1. Clone the workshop repository.
     
     ```git clone https://github.com/thomasht86/mlflow-workshop.git```
 
-3. Create conda environment. 
+2. Create conda environment. 
 
-    Run ```conda env create -f condaenv.yml``` from the project root directory in a WSL terminal.
+    Run ```conda env create -f condaenv.yml``` from the project root directory in a Anaconda prompt.
     This will create a conda environment with the necessary packages installed.
 
-4. Activate conda environment. 
+3. Activate conda environment. 
     
-    Run ```conda activate mlflowenv``` in WSL terminal. This will activate the newly created environment.
+    Run ```conda activate mlflowenv``` in Anaconda prompt. This will activate the newly created environment.
 
-5. Start jupyter notebook server with the active environment.
+4. Start jupyter notebook server with the active environment.
 
-    Run ```jupyter notebook``` in WSL terminal. The jupter server is now available at ```localhost:8888``` in your browser. 
+    Run ```jupyter notebook``` in Anaconda prompt. The jupyter server is now available at ```localhost:8888``` in your browser. 
 
+5. Start mlflow tracking server with the active environment.
+
+    Run ```mlflow ui``` in Anaconda prompt. The mlflow server is now available at ```localhost:5000``` in your browser. 
